@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-@propertyWrapper struct OptionalCoreData<Value> {
+@propertyWrapper public struct OptionalCoreData<Value> {
     private let key: String
     private let object: NSManagedObject
 
