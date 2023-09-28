@@ -16,10 +16,16 @@ let package = Package(
             name: "RefdsCoreData",
             targets: ["RefdsCoreData"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/refdsenterprise/refds-core.git", branch: "main")
+    ],
     targets: [
         .target(
             name: "RefdsCoreData",
-            dependencies: []),
+            dependencies: [
+                .product(
+                    name: "RefdsCore",
+                    package: "refds-core")
+            ]),
     ]
 )

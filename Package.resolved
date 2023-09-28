@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "refds-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/refdsenterprise/refds-core.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c549374960070489457348e0f7b2a19362db879f"
+      }
+    },
+    {
+      "identity" : "refds-resource",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/refdsenterprise/refds-resource.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9159a2714fcfb0d8773aab459c070d487280aa67"
+      }
+    }
+  ],
+  "version" : 2
+}
