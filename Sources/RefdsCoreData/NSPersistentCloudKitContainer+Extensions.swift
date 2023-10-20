@@ -9,7 +9,9 @@ public extension NSPersistentCloudKitContainer {
         cloudContainerId: String
     ) -> NSPersistentCloudKitContainer {
         let container = NSPersistentCloudKitContainer(name: name, managedObjectModel: model)
-        let storeURL = URL.storeURL(for: store, databaseName: name)
+        guard let storeURL = try? URL.storeURL(for: store, databaseName: name) else {
+            fatalError("Unresolved error: store url")
+        }
         let storeDescription = NSPersistentStoreDescription(url: storeURL)
         storeDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: cloudContainerId)
         container.persistentStoreDescriptions = [storeDescription]
