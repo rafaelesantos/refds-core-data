@@ -1,6 +1,6 @@
 import CoreData
 
-public struct CoreDataAttributeDescription {
+public struct RefdsCoreDataAttributeDescription {
     public static func attribute(
         name: String,
         type: NSAttributeType,
@@ -9,8 +9,8 @@ public struct CoreDataAttributeDescription {
         isIndexedBySpotlight: Bool = false,
         attributeValueClassName: String? = nil,
         valueTransformerName: String? = nil
-    ) -> CoreDataAttributeDescription {
-        return CoreDataAttributeDescription(
+    ) -> RefdsCoreDataAttributeDescription {
+        return RefdsCoreDataAttributeDescription(
             name: name,
             attributeType: type,
             isOptional: isOptional,

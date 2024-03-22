@@ -1,21 +1,19 @@
 import CoreData
 
-@available(iOS 11.0, tvOS 11.0, macOS 10.13, *)
-public struct CoreDataEntityDescription {
-    
+public struct RefdsCoreDataEntityDescription {
     public static func entity(
         name: String,
         managedObjectClass: NSManagedObject.Type = NSManagedObject.self,
         parentEntity: String? = nil,
         isAbstract: Bool = false,
-        attributes: [CoreDataAttributeDescription] = [],
-        fetchedProperties: [CoreDataFetchedPropertyDescription] = [],
-        relationships: [CoreDataRelationshipDescription] = [],
-        indexes: [CoreDataFetchIndexDescription] = [],
+        attributes: [RefdsCoreDataAttributeDescription] = [],
+        fetchedProperties: [RefdsCoreDataFetchedPropertyDescription] = [],
+        relationships: [RefdsCoreDataRelationshipDescription] = [],
+        indexes: [RefdsCoreDataFetchIndexDescription] = [],
         constraints: [Any] = [],
         configuration: String? = nil
-    ) -> CoreDataEntityDescription {
-        CoreDataEntityDescription(
+    ) -> RefdsCoreDataEntityDescription {
+        RefdsCoreDataEntityDescription(
             name: name,
             managedObjectClassName: NSStringFromClass(managedObjectClass),
             parentEntity: parentEntity,
@@ -33,10 +31,10 @@ public struct CoreDataEntityDescription {
     public var managedObjectClassName: String
     public var parentEntity: String?
     public var isAbstract: Bool
-    public var attributes: [CoreDataAttributeDescription]
-    public var fetchedProperties: [CoreDataFetchedPropertyDescription]
-    public var relationships: [CoreDataRelationshipDescription]
-    public var indexes: [CoreDataFetchIndexDescription]
+    public var attributes: [RefdsCoreDataAttributeDescription]
+    public var fetchedProperties: [RefdsCoreDataFetchedPropertyDescription]
+    public var relationships: [RefdsCoreDataRelationshipDescription]
+    public var indexes: [RefdsCoreDataFetchIndexDescription]
     public var constraints: [Any]
     public var configuration: String?
 }

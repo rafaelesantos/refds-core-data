@@ -1,12 +1,12 @@
 import CoreData
 
-public struct CoreDataFetchedPropertyDescription {
+public struct RefdsCoreDataFetchedPropertyDescription {
     public static func fetchedProperty(
         name: String,
         fetchRequest: NSFetchRequest<NSFetchRequestResult>,
         isOptional: Bool = false
-    ) -> CoreDataFetchedPropertyDescription {
-        return CoreDataFetchedPropertyDescription(
+    ) -> RefdsCoreDataFetchedPropertyDescription {
+        return RefdsCoreDataFetchedPropertyDescription(
             name: name,
             fetchRequest: fetchRequest,
             isOptional: isOptional

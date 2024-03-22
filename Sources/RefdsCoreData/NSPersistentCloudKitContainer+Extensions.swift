@@ -1,5 +1,5 @@
 import CoreData
-import RefdsCore
+import RefdsShared
 
 public extension NSPersistentCloudKitContainer {
     static func make(

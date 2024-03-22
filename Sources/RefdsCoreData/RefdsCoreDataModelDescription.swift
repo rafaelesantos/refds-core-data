@@ -1,10 +1,9 @@
 import CoreData
 
-@available(iOS 11.0, tvOS 11.0, macOS 10.13, *)
-public struct CoreDataModelDescription {
-    public var entities: [CoreDataEntityDescription]
+public struct RefdsCoreDataModelDescription {
+    public var entities: [RefdsCoreDataEntityDescription]
 
-    public init(entities: [CoreDataEntityDescription]) {
+    public init(entities: [RefdsCoreDataEntityDescription]) {
         self.entities = entities
     }
 
@@ -47,7 +46,7 @@ public struct CoreDataModelDescription {
             entityNameToPropertyNameToProperty[entityDescription.name] = propertyNameToProperty
         }
 
-        var relationshipsWithInverse: [(CoreDataRelationshipDescription, NSRelationshipDescription)] = []
+        var relationshipsWithInverse: [(RefdsCoreDataRelationshipDescription, NSRelationshipDescription)] = []
 
         for entityDescription in entitiesDescriptions {
             let entity = entityNameToEntity[entityDescription.name]!

@@ -1,7 +1,6 @@
 import CoreData
 
-@available(iOS 11.0, tvOS 11.0, macOS 10.13, *)
-public struct CoreDataFetchIndexDescription {
+public struct RefdsCoreDataFetchIndexDescription {
     public struct Element {
         public enum Property {
             case property(name: String)
@@ -25,8 +24,8 @@ public struct CoreDataFetchIndexDescription {
         public var ascending: Bool
     }
 
-    public static func index(name: String, elements: [Element]) -> CoreDataFetchIndexDescription {
-        CoreDataFetchIndexDescription(name: name, elements: elements)
+    public static func index(name: String, elements: [Element]) -> RefdsCoreDataFetchIndexDescription {
+        RefdsCoreDataFetchIndexDescription(name: name, elements: elements)
     }
 
     public var name: String

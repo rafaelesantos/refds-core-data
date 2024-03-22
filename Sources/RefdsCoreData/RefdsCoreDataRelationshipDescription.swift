@@ -1,6 +1,6 @@
 import CoreData
 
-public struct CoreDataRelationshipDescription {
+public struct RefdsCoreDataRelationshipDescription {
     public static func relationship(
         name: String,
         destination: String,
@@ -9,9 +9,9 @@ public struct CoreDataRelationshipDescription {
         deleteRule: NSDeleteRule = .nullifyDeleteRule,
         inverse: String? = nil,
         ordered: Bool = false
-    ) -> CoreDataRelationshipDescription {
+    ) -> RefdsCoreDataRelationshipDescription {
         let maxCount = toMany ? 0 : 1
-        return CoreDataRelationshipDescription(
+        return RefdsCoreDataRelationshipDescription(
             name: name,
             destination: destination,
             optional: optional,
@@ -33,12 +33,12 @@ public struct CoreDataRelationshipDescription {
     public var ordered: Bool
 }
 
-extension CoreDataRelationshipDescription {
+extension RefdsCoreDataRelationshipDescription {
     public static func relationship<Root, Value, InverseRoot, InverseValue>(
         _ keyPath: KeyPath<Root, Value>,
         inverse: KeyPath<InverseRoot, InverseValue>,
         deleteRule: NSDeleteRule = .nullifyDeleteRule
-    ) -> CoreDataRelationshipDescription where Root: NSManagedObject, InverseRoot: NSManagedObject {
+    ) -> RefdsCoreDataRelationshipDescription where Root: NSManagedObject, InverseRoot: NSManagedObject {
         assert(keyPath.destinationType is NSManagedObject.Type)
         assert(inverse.destinationType is NSManagedObject.Type)
         
@@ -55,7 +55,7 @@ extension CoreDataRelationshipDescription {
     public static func relationship<Root, Value>(
         _ keyPath: KeyPath<Root, Value>,
         deleteRule: NSDeleteRule = .nullifyDeleteRule
-    ) -> CoreDataRelationshipDescription where Root: NSManagedObject {
+    ) -> RefdsCoreDataRelationshipDescription where Root: NSManagedObject {
         assert(keyPath.destinationType is NSManagedObject.Type)
         return relationship(
             name: keyPath.stringValue,
