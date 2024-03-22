@@ -1,6 +1,6 @@
 # Refds Core Data
 
-RefdsCoreData é uma biblioteca Swift que simplifica a integração do Core Data em seus projetos utilizando Swift Package Manager (SPM). Com apenas algumas linhas de código, você pode começar a utilizar o Core Data em seu aplicativo de forma rápida e eficiente.
+RefdsCoreData is a Swift library that simplifies the integration of Core Data into your projects using Swift Package Manager (SPM). With just a few lines of code, you can start using Core Data in your application quickly and efficiently.
 
 ## Installation
 
