@@ -21,7 +21,7 @@ let package = Package(
             targets: ["RefdsCoreData"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/refdsenterprise/refds-shared.git", branch: "main")
+        .package(url: "https://github.com/rafaelesantos/refds-shared.git", branch: "main")
     ],
     targets: [
         .target(
